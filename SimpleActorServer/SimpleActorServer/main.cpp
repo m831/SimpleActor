@@ -2,7 +2,6 @@
 
 #include "logger.h"
 #include "server.h"
-#include "utility.h"
 
 int main() {
   std::unique_ptr<Server> server = std::make_unique<Server>();
