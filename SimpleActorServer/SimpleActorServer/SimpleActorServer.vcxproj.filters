@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\lib">
+      <UniqueIdentifier>{b5968163-b757-4c91-a844-d09929246aa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\network">
+      <UniqueIdentifier>{b8cd8427-8fd3-49fe-9c9a-d7869f8ca435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\src">
+      <UniqueIdentifier>{f9b495b3-9cb1-43bf-981d-8fb89782cb4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\lib">
+      <UniqueIdentifier>{dfc2f91c-efa4-4eef-83f4-7814c3e83e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\network">
+      <UniqueIdentifier>{5f18ba40-0a51-443e-9eec-329e4cb6f599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\src">
+      <UniqueIdentifier>{9a23f7d8-e82d-47b4-b9a8-49be565387be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="actor_base_model.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrent_queue.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="json.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_pool_manager.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="timer_event_manager.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="network_manager.h">
+      <Filter>헤더 파일\network</Filter>
+    </ClInclude>
+    <ClInclude Include="network_utility.h">
+      <Filter>헤더 파일\network</Filter>
+    </ClInclude>
+    <ClInclude Include="simple_message.h">
+      <Filter>헤더 파일\network</Filter>
+    </ClInclude>
+    <ClInclude Include="session.h">
+      <Filter>헤더 파일\network</Filter>
+    </ClInclude>
+    <ClInclude Include="user_manager.h">
+      <Filter>헤더 파일\src</Filter>
+    </ClInclude>
+    <ClInclude Include="room_actor.h">
+      <Filter>헤더 파일\src</Filter>
+    </ClInclude>
+    <ClInclude Include="room_manager.h">
+      <Filter>헤더 파일\src</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>헤더 파일\src</Filter>
+    </ClInclude>
+    <ClInclude Include="user_actor.h">
+      <Filter>헤더 파일\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="actor_base_model.cpp">
+      <Filter>소스 파일\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>소스 파일\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool_manager.cpp">
+      <Filter>소스 파일\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="timer_event_manager.cpp">
+      <Filter>소스 파일\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cpp">
+      <Filter>소스 파일\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="network_manager.cpp">
+      <Filter>소스 파일\network</Filter>
+    </ClCompile>
+    <ClCompile Include="network_utility.cpp">
+      <Filter>소스 파일\network</Filter>
+    </ClCompile>
+    <ClCompile Include="session.cpp">
+      <Filter>소스 파일\network</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일\src</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cpp">
+      <Filter>소스 파일\src</Filter>
+    </ClCompile>
+    <ClCompile Include="room_actor.cpp">
+      <Filter>소스 파일\src</Filter>
+    </ClCompile>
+    <ClCompile Include="room_manager.cpp">
+      <Filter>소스 파일\src</Filter>
+    </ClCompile>
+    <ClCompile Include="user_actor.cpp">
+      <Filter>소스 파일\src</Filter>
+    </ClCompile>
+    <ClCompile Include="user_manager.cpp">
+      <Filter>소스 파일\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
