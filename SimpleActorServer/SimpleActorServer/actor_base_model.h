@@ -22,7 +22,6 @@ class ActorBaseModel : public std::enable_shared_from_this<ActorBaseModel> {
   virtual ~ActorBaseModel();
 
   void StartRecursiveEvent(const int64_t inteval_msec);
-  void FlushEvent();
   void AsyncTask(const std::function<void()>& task);
   void AsyncTask(const std::function<void()>& task, const int64_t delay_msec);
 
@@ -35,4 +34,6 @@ class ActorBaseModel : public std::enable_shared_from_this<ActorBaseModel> {
   int64_t recursive_interval_msec_;
   std::atomic<int> task_count_;
   ConcurrentQueue<std::function<void()>> task_queue_;
+
+  void FlushEvent();
 };

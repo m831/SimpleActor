@@ -27,25 +27,13 @@ void ActorBaseModel::StartRecursiveEvent(const int64_t inteval_msec) {
   }
 }
 
-void ActorBaseModel::FlushEvent() {
-  std::function<void()> task;
-
-  while (true) {
-    if (not task_queue_.TryDequeue(&task)) {
-      break;
-    }
-    --task_count_;
-    task();
-  }
-}
-
 void ActorBaseModel::AsyncTask(const std::function<void()>& task) {
   task_queue_.Enqueue(task);
 
   if (++task_count_ == 1) {
     auto self = shared_from_this();
     ThreadPoolManager::GetInstance()->PushTask(
-        [self]() { self->FlushEvent(); });
+        [this, self]() { FlushEvent(); });
   }
 }
 
@@ -74,4 +62,16 @@ void ActorBaseModel::SelfEvent(const int64_t expected_msec) {
       self,
       [this, self, next_expected_msec]() { SelfEvent(next_expected_msec); },
       delay_msec);
+}
+
+void ActorBaseModel::FlushEvent() {
+  std::function<void()> task;
+
+  while (true) {
+    if (not task_queue_.TryDequeue(&task)) {
+      break;
+    }
+    --task_count_;
+    task();
+  }
 }
